@@ -1,6 +1,6 @@
 name: RegionElo
 version: 1.0
-main: com.vuhp.RegionElo
+main: me.regionelo.RegionElo
 api-version: 1.21
 author: VuHoaiNam
 description: Plugin tính ELO trong vùng PvP
