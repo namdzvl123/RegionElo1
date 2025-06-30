@@ -34,7 +34,7 @@
   </dependencies>
 
   <build>
-    <!-- Copy tài nguyên như plugin.yml, config.yml vào .jar -->
+    <!-- Bao gồm plugin.yml và config.yml vào .jar -->
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -54,11 +54,17 @@
         </configuration>
       </plugin>
 
-      <!-- Đóng gói .jar -->
+      <!-- Đóng gói .jar và include tài nguyên -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
+          <includes>
+            <include>**/*.class</include>
+            <include>plugin.yml</include>
+            <include>config.yml</include>
+          </includes>
           <archive>
             <manifest>
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
