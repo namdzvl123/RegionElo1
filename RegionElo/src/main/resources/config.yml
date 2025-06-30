@@ -1,2 +1,22 @@
 region: clanwarzone
 starting-elo: 1000
+
+elo:
+  win: 10
+  lose: 5
+
+ranks:
+  knight:
+    cost: 100
+    permission: regionelo.rank.knight
+  warrior:
+    cost: 250
+    permission: regionelo.rank.warrior
+  legend:
+    cost: 500
+    permission: regionelo.rank.legend
+
+messages:
+  no-permission: "&cBạn không có quyền!"
+  not-enough-elo: "&cBạn chưa đủ ELO để đạt rank này!"
+  rank-unlocked: "&aBạn đã mở khóa rank %rank%!"
