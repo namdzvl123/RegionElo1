@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.vuhp</groupId>
@@ -9,10 +8,8 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>RegionElo</name>
-  <description>Plugin tính ELO trong vùng PvP</description>
-
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>21</java.version>
   </properties>
 
@@ -24,7 +21,6 @@
   </repositories>
 
   <dependencies>
-    <!-- Paper API -->
     <dependency>
       <groupId>io.papermc.paper</groupId>
       <artifactId>paper-api</artifactId>
@@ -34,7 +30,6 @@
   </dependencies>
 
   <build>
-    <!-- Tự động đưa plugin.yml, config.yml vào file JAR -->
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -43,7 +38,7 @@
     </resources>
 
     <plugins>
-      <!-- Biên dịch bằng Java 21 -->
+      <!-- Compile bằng Java 21 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -54,7 +49,7 @@
         </configuration>
       </plugin>
 
-      <!-- Đóng gói JAR chuẩn -->
+      <!-- Đóng gói .jar -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
